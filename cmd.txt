@@ -1,0 +1,15 @@
+create database hospital_management;
+## Table ##
+create table admins(id tinyint(3) auto_increment primary key,name varchar(30) not null,email varchar(30) not null,password varchar(30) not null,type tinyint(3) not null);
+
+create table staffs(id tinyint(3) auto_increment primary key,name varchar(30) not null,email varchar(30) not null,password varchar(30) not null,type tinyint(3) not null);
+
+create table doctors(id tinyint(3) auto_increment primary key,name varchar(30) not null,email varchar(30) not null,password varchar(30) not null,type tinyint(3) not null);
+
+create table patients(id tinyint(3) auto_increment primary key, name varchar(30) not null, email varchar(30) not null, contact_no varchar(11) not null, age tinyint(3) not null, password varchar(40) not null);
+
+create table appointments(id tinyint(3) auto_increment primary key, patient_name varchar(30) not null, patient_age tinyint(3) not null, patient_disease varchar(300) not null, doctor_fees int(4) not null, doctor_id tinyint(3), patient_id tinyint(3));
+
+## view ##
+CREATE VIEW doctor_patient AS
+SELECT d.name,d.email,d.fees,p.name,p.email,p.contact_no FROM doctors d, patients p WHERE d.id='$appoint_id' AND p.email='$_SESSION['email']';

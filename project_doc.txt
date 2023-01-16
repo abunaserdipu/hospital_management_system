@@ -1,0 +1,4 @@
+Super Admin will add & remove admins, & can see all activities in the application.
+Admins can add,remove staffs & doctors. Can see all activities except super admin activity.
+Every department will have a admin.
+Every depar

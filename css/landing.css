@@ -1,0 +1,24 @@
+/* section{
+    height: 100%;
+    width:100%;
+} */
+.carousel-title{
+    margin:auto;
+    position:absolute;
+    top: 300px;
+    left: 500px;
+}
+.carousel-title h3{
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color:aqua;
+}
+.carousel-title p{
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    color:blanchedalmond;
+}
