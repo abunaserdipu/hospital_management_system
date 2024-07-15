@@ -3,7 +3,7 @@ name: Deploy PHP to InfinityFree
 on:
   push:
     branches:
-      - main  # Change to your default branch
+      - main
 
 jobs:
   deploy:
@@ -16,7 +16,7 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'  # Specify the PHP version
+        php-version: '7.4'
         extensions: mbstring, zip, xml
         coverage: none
 
@@ -32,5 +32,4 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /htdocs  # The directory to deploy to on the server
-        local-dir: .  # The local directory to deploy
+        server-dir: /htdocs
