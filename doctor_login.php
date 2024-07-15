@@ -42,6 +42,11 @@ include_once("includes/db_config.php");
                         <input class="btn btn-primary form-control mt-3" type="submit" name="login" value="LOGIN">
                     </form>
                 </div>
+                <div class="text-center">
+                    <p><strong>Email:</strong> test@gmail.com</p>
+                    <p><strong>Password:</strong> test123</p>
+                </div>
+
             </div>
 
             <?php
