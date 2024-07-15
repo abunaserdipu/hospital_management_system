@@ -73,9 +73,13 @@ include_once("includes/db_config.php");
                     <!-- When want to normally log in -->
                     <input class="btn btn-primary form-control mt-3" type="submit" name="login" value="LOGIN">
                     </form>
-                    <div class="text-center">
-                        <span class="text-bold">Have an account?</span>
+                    <div class="text-center py-2">
+                        <span class="text-bold">Don't have account?</span>
                         <a href="patient_register.php">Register now</a>
+                    </div>
+                    <div class="text-center">
+                        <p><strong>Email:</strong> test@gmail.com</p>
+                        <p><strong>Password:</strong> test123</p>
                     </div>
                 </div>
             </div>
