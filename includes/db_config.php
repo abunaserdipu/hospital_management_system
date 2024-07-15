@@ -9,5 +9,5 @@
     // define("USER","root");
     // define("PASS","");
     // define("DB","");
-    // $db = new mysqli(HOST,USER,PASS,DB);
+    $db = new mysqli(HOST,USER,PASS,DB);
 ?>
