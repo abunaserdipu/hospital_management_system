@@ -1,0 +1,36 @@
+name: Deploy PHP to InfinityFree
+
+on:
+  push:
+    branches:
+      - main  # Change to your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'  # Specify the PHP version
+        extensions: mbstring, zip, xml
+        coverage: none
+
+    - name: Install Composer dependencies
+      run: |
+        if [ -f "composer.json" ]; then
+          composer install --no-progress --prefer-dist --optimize-autoloader --no-dev
+        fi
+
+    - name: Upload to InfinityFree
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /htdocs  # The directory to deploy to on the server
+        local-dir: .  # The local directory to deploy
