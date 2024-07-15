@@ -1,35 +1,39 @@
 <?php
 session_start();
-if($_SESSION['email']==null){
+if ($_SESSION['email'] == null) {
     header("Location:doctor_login.php");
 }
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IsDB-Hospital | Doctor Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.jpg">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="plugins/bootstrap-5.2.1/css/bootstrap.min.css">
     <script src="plugins/bootstrap-5.2.1/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
     <div class="container-fluid">
-    <?php include_once("header.php") ?>
-    <div class="row">
+        <?php include_once("header.php") ?>
+        <div class="row">
             <div class="col-md-3">
-            <?php include_once("sidebar.php") ?>
+                <?php include_once("sidebar.php") ?>
             </div>
-            <div class="col-md-9"> 
+            <div class="col-md-9">
                 <?php
                 include_once("dashboard.php");
-            ?>
+                ?>
             </div>
         </div>
     </div>
-        
+
 </body>
+
 </html>
