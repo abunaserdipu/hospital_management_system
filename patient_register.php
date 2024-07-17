@@ -45,6 +45,8 @@ include_once("includes/db_config.php");
                             <label for="">Password:</label>
                             <input class="form-control" type="password" name="password" placeholder="Enter Your Password">
                         </div>
+
+                        <script src="js/drag-drop.js"></script>
                         <input class="btn btn-primary form-control mt-3" type="submit" name="register" value="REGISTER">
                     </form>
                     <div class="text-center">
